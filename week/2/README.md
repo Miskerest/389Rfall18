@@ -22,6 +22,7 @@ Fred Krueger
 2. List all personal information (including social media accounts) you can find about him. For each, briefly detail how you discovered them.
 
 https://twitter.com/kruegster1990/ - Twitter. Found by Googling the username.
+
 http://www.cornerstoneairlines.co/about.html  - He is the owner of this definitely real airline. He also couldn't be bothered to get a LetsEncrypt certificate...
 
 3. What is the IP address of the webserver hosting his company's site? How did you discover this?
@@ -35,11 +36,13 @@ http://www.cornerstoneairlines.co/about.html  - He is the owner of this definite
 5. Did you find any other IP addresses associated with this website? What do they link to, or where did you find them?
 
 142.93.117.193 - listed in the admin panel.
+
 142.93.118.186 - Actual website 
 
 6. If you found any associated server(s), where are they located? How did you discover this?
 
 142.93.117.193 - Info attained from iplocation.net. Server is located in	North Bergen, New Jersey. Hosted by DigitalOcean.
+
 142.93.118.186 - Same as above
 
 7. Which operating system is running on the associated server(s)? How did you discover this?
@@ -50,7 +53,9 @@ Nmap seems to think both are running a version of Linux v. 3.10-4.8. They are sp
 8. **BONUS:** Did you find any other flags on your OSINT mission? (Up to 9 pts!)
 
 CMSC389R-{h1dden_fl4g_in_s0urce} - flag hidden in page source on main website
+
 CMSC389R-{fly_th3_sk1es_w1th_u5} - found on his website. Checked robots.txt -> /secrets -> commented out in page source
+
 CMSC389R-{y0u_found_th3_g1t_repo} - found on hidden git repo on his website, /.git
 
 ### Part 2
