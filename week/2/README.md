@@ -23,6 +23,8 @@ Fred Krueger
 
 https://twitter.com/kruegster1990/ - Twitter. Found by Googling the username.
 
+https://www.instagram.com/kruegster1990/ - Found with namechk
+
 http://www.cornerstoneairlines.co/about.html  - He is the owner of this definitely real airline. He also couldn't be bothered to get a LetsEncrypt certificate...
 
 3. What is the IP address of the webserver hosting his company's site? How did you discover this?
