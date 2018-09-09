@@ -60,6 +60,8 @@ CMSC389R-{fly_th3_sk1es_w1th_u5} - found on his website. Checked robots.txt -> /
 
 CMSC389R-{y0u_found_th3_g1t_repo} - found on hidden git repo on his website, /.git
 
+CMSC389R-{dns-txt-rec0rd-ftw} - found in DNS records for cornerstoneairlines.co
+
 ### Part 2
 
 Use the provided python stub code [('stub.py')](stub.py) or write your own program in another language to gain access to the Cornerstone Airlines administrator server via an open port that you should have found in Part 1. 
