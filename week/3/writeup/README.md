@@ -15,7 +15,7 @@ Digital acknowledgement of honor pledge: Mike Bailey
 
 #### 1. Readable Git Repository 
 
-The first issue that should be addressed is the Git repository that's present on the main website. Giving everyone in the world access to this repository could provide potential attackers with information regarding how your webserver's backend is configured. This could allow for malicious parties to discover attack vectors against your site. This is in part due to the fact that the Git repo shows commit log history, and if there was ever sensitive info or files that were present in the repository, the attacker would now know where to look for them. Someone might even be able to discern entire parts of code that manage the service running, such as database passwords, hardcoded sensitive information, etc. Remove the .git repo from the web directory to fix this issue.
+The first issue that should be addressed is the Git repository that's present on the main website. Giving everyone in the world access to this repository could provide potential attackers with information regarding how your webserver's backend is configured. This could allow for malicious parties to discover attack vectors against your site. This is in part due to the fact that the Git repo shows commit log history, and if there was ever sensitive info or files that were present in the repository, the attacker would now know where to look for them. Someone might even be able to discern entire parts of code that manage the service running, such as database passwords, hardcoded sensitive information, etc. Remove the .git repo from the web directory to fix this issue. It's not necessary for the website's functionality.
 
 #### 2. Open/Cleartext Remote Access 
 
