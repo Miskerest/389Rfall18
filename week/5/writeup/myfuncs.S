@@ -18,7 +18,7 @@ my_memset:
         je      .exit                ; jmp to exit if so
         mov     edx, dword  [rbp-4]  ; otherwise move counter back to eax
         mov     rax, qword  [rbp-24] ; move dst address to rax
-        add     rdx, rax             ; inc dst address by counter
+        add     rdx, rax             ; inc dst address
         movzx   eax, byte  [rbp-28]  ; move byte to copy into eax 
         mov     byte  [rdx], al      ; move byte to copy into memory ptr @ rdx
         add     dword  [rbp-4], 1    ; increment counter
@@ -46,7 +46,7 @@ my_strncpy:
         mov     rdx, qword [rbp-24] ; copy dst ptr to rdx
         add     rdx, rcx            ; switcheroo
         movzx   eax, byte [rax]     ; grab the pertinent byte
-        mov     byte [rdx], al      ; copy byte to dst
+        mov     byte [rdx], al      ; more byte grabbing
         add     dword [rbp-4], 1    ; add 1 to the index
 .check:
         mov     eax, dword [rbp-4]  ; move final index/size to eax
