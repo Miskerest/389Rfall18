@@ -34,7 +34,7 @@ I notice the path `/tmp/stego` right off the bat being pushed onto the stack. Wh
 
 It took me a while to figure out why I wasn't able to find the file- it was really `/tmp/.stego`, and I had simply misread the path. Oh well, what's 20 minutes of confusion and blog reading? Here's our `stego` file:
 
-![stego.jpg](./stego.jpg)
+![.stego.jpg](./.stego.jpg)
 
 Looking at the .stego file, we get a nice JPEG image of a Stegosaurus. Taking the name of the file into consideration, along with Mike's hint about using `steghide`, I began bruteforcing passwords with `steghide` using a script available [here](https://github.com/Paradoxis/StegCracker). Letting it run for a couple of hours with the rockyou.txt dictionary, I get the password `stegosaurus`. After some cursing, I took a look at the extracted data.
 
