@@ -18,7 +18,7 @@ Adding in a for loop to iterate over each word in addition to each printable cha
 
 Oh yeah, the wordlist was in friggin HTML. Had to open it and pull out all the passwords by hand. I put those in `wordlist.txt`.
 
-![part1.png](./part1.png)
+![part1.png](./part1.PNG)
 
 ### Part 2 (40 Pts)
 
